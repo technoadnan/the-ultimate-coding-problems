@@ -9,6 +9,7 @@ int main(int argc, char const *argv[]) {
    printf("%u\n", &j); // address of j
    printf("%d\n", i); // value of i
    printf("%d\n", *(&j)); // 
+   printf("val %d\n", *j); // 
    
    int a = 10;
    int *ptr = &a;
