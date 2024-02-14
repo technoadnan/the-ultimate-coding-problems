@@ -19,9 +19,9 @@ int main(int argc, char const *argv[]) {
    int arr[3][10];
    multiplication_table(arr[0], 2);
    printf("\n");
-   multiplication_table(arr[0], 7);
+   multiplication_table(arr[1], 7);
    printf("\n");
-   multiplication_table(arr[0], 9);
+   multiplication_table(arr[2], 9);
    printf("\n");
 
    
