@@ -1,17 +1,17 @@
-def count_substring(string, sub_string):
-    sub = []
-    st = []
-    for k in sub_string:
-        sub.append(k)
-    for j in range(string):
-        st.append(j)
-    print(sub)
-        
-    return 
-
 if __name__ == '__main__':
-    string = input().strip()
-    sub_string = input().strip()
-    
-    count = count_substring(string, sub_string)
-    print(count)
+    s = input().strip()
+
+    # Check for alphanumeric characters
+    print(any(c.isalnum() for c in s))
+
+    # Check for alphabetical characters
+    print(any(c.isalpha() for c in s))
+
+    # Check for digits
+    print(any(c.isdigit() for c in s))
+
+    # Check for lowercase characters
+    print(any(c.islower() for c in s))
+
+    # Check for uppercase characters
+    print(any(c.isupper() for c in s))
