@@ -1,16 +1,19 @@
-design_pattern = input("").split()
-first_num = int(design_pattern[0])
-second_num = int(design_pattern[1])
+def print_door_mat(N, M):
+    # Top half
+    for i in range(1, N, 2):
+        pattern = '.|.' * i
+        print(pattern.center(M, '-'))
+    
+    # Center line
+    print('WELCOME'.center(M, '-'))
+    
+    # Bottom half
+    for i in range(N-2, 0, -2):
+        pattern = '.|.' * i
+        print(pattern.center(M, '-'))
 
-sym1 = "-"
-sym2 = ".|."
+# Input values
+N, M = map(int, input().split())
 
-# Initialize k to 1 to handle the increasing number of .|. symbols
-k = 1
-
-for a in range(1, first_num + 1):  # Loop for the number of rows
-   num_dashes = (second_num - k * len(sym2)) // 2  # Calculate the number of dashes on each side
-   if num_dashes < 3:
-      break
-   print(sym1 * num_dashes + sym2 * k + sym1 * num_dashes)  # Print the pattern
-   k += 2  # Increment the number of .|. symbols by 2
+# Print the door mat design
+print_door_mat(N, M)
