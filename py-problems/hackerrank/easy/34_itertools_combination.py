@@ -1,8 +1,10 @@
-from itertools import combinations_with_replacement
+from itertools import combinations_with_replacement,combinations
 
 string, number = map(str, input("").split())
-all_permutations = list(sorted(combinations_with_replacement(string, int(number))))
+combinations_with_replacements = list(combinations_with_replacement(sorted(string), int(number)))
+combinationss = list(combinations(sorted(string), int(number)))
 
-for j in all_permutations:
-   str_format = ''.join(j)
-   print(str_format)  
+all_combo = sorted(set(combinations_with_replacements + combinationss))
+
+for j in all_combo:
+   print("".join(j))
