@@ -6,12 +6,14 @@
 s = set(map(int,input("").split()))
 n = int(input())
 ss = set()
+status = False
 for j in range(n):
-   ss.update(map(str,input().split()))
-
-if ss.difference(s):
-   print(False)
-else:
-   print(True)
-# print(ss)
-# print(s)
+   l = list(map(int,input().split()))
+   for i in l:
+      if i not in s:
+         status = False
+         break
+      else:
+         status = True
+      
+print(status)
