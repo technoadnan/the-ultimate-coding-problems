@@ -1,0 +1,1 @@
+eval(input("")) # seriously this code is a joke for 20 points
