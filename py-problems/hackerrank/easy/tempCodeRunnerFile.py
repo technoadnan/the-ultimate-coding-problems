@@ -1,10 +1,15 @@
-def print_formatted(number):
-    # your code goes here
-    for j in range(1,number+1):
-        # print(j,oct(j).split("0o")[1],hex(j),bin(j),"\n")
-        print(hex(j).split("0o")[1])
-        
+import numpy as np
 
-if __name__ == '__main__':
-    n = int(input())
-    print_formatted(n)
+n = int(input(""))
+
+array = []
+
+for j in range(n):
+   l = list(map(float, input("").split(" ")))
+   print(l)
+   array.append(l)
+
+array = np.array(array)
+
+print(np.linalg.det(array))
+
