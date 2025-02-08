@@ -5,7 +5,7 @@ public String notString(String str) {
     if((str.length() >= 3 && str.substring(0, 3).equals("not"))){
         return str;
     }
-    // if(notSubString.equals("not") && str.length() >= 3){
+    // if(notSubString.equals("not") && str.length() >= 3){ 
     //   return str;
     // }
     else{
